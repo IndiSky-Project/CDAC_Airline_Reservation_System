@@ -160,6 +160,6 @@ body.sidebar-open .page-content-wrapper {
   }
   
   body.sidebar-open .page-content-wrapper {
-    margin-left: 0; /* usually sidebar overlays on mobile */
+    margin-left: 0; /*   usually sidebar overlays on mobile  */
   }
 }
