@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Login from '../src/Pages/Login';
 import Home from '../src/Pages/Home';
+import ShowFlights from '../src/Pages/ShowFlights';
 
 import Contact from '../src/Pages/Contact';
 import TermsPrivacy from '../src/Pages/TermsPrivacy';
@@ -20,8 +21,6 @@ import UserDashBoard from './Pages/UserDashBoard';
 import AdminDashboard from './Pages/Admin/AdminDashboard';
 import ManageAirlines from './Pages/Admin/ManageAirlines';
 import ManageFlights from './Pages/Admin/ManageFlights';
-
-
 
 
 
@@ -90,29 +89,25 @@ function App() {
                         
 
                         
-                        <Route path='/admin/airlines' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirlines /></ProtectedRoute>} />
+                      <Route path='/admin/airlines' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirlines /></ProtectedRoute>} />
 
                       <Route path='/admin/flights' element={<ProtectedRoute requiredRole="ADMIN"><ManageFlights /></ProtectedRoute>} />
 
 
-                        {/* Protected User routes */}
-                        <Route path="/flight-status" element={<ProtectedRoute requiredRole="USER"><FlightStatus /></ProtectedRoute>} />
+                      {/* Protected User routes */}
+                      <Route path="/flight-status" element={<ProtectedRoute requiredRole="USER"><FlightStatus /></ProtectedRoute>} />
+
+                      <Route path='/show' element={<ProtectedRoute requiredRole="USER"><ShowFlights /></ProtectedRoute>} />
+
+                      <Route path='/dashboard' element={<ProtectedRoute requiredRole="USER"><UserDashBoard /></ProtectedRoute>} />
+  
+                      <Route path="/my-bookings" element={<ProtectedRoute requiredRole="USER"><MyBookings /></ProtectedRoute>} />
+
+                      <Route path="/profile" element={<ProtectedRoute requiredRole="USER"><UserProfile /></ProtectedRoute>} />
 
                         
 
-                        <Route path='/dashboard' element={<ProtectedRoute requiredRole="USER"><UserDashBoard /></ProtectedRoute>} />
-
-                        
-
-                        
-                        
-                        <Route path="/my-bookings" element={<ProtectedRoute requiredRole="USER"><MyBookings /></ProtectedRoute>} />
-
-                        <Route path="/profile" element={<ProtectedRoute requiredRole="USER"><UserProfile /></ProtectedRoute>} />
-
-                        
-
-                        
+                  
                       </Routes>
                     </bookingContext.Provider>
                   </selectedSeatsContext.Provider>
