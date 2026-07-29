@@ -1,0 +1,80 @@
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  z-index: 1050;
+  transition: margin-left 0.3s ease;
+  background-color: #0056d2; /* adjust as needed */
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+/* Header navigation links container */
+.navbar-nav {
+  margin-left: 250px; /* expanded sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar collapsed, reduce left margin */
+.sidebar-collapsed nav.navbar .navbar-nav {
+  margin-left: 80px; /* collapsed sidebar width */
+}
+
+/* Sidebar container */
+.admin-sidebar {
+  position: fixed;
+  top: 56px; /* below header */
+  left: 0;
+  height: calc(100vh - 56px);
+  width: 250px;
+  background-color: #1c1f26;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  z-index: 1040;
+  padding-top: 1rem;
+}
+
+/* Collapsed sidebar */
+.sidebar-collapsed .admin-sidebar {
+  width: 80px;
+}
+
+/* Sidebar toggle button inside sidebar */
+.sidebar-toggle {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  background-color: #444;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: right 0.3s ease;
+  z-index: 1060;
+}
+
+/* Adjust toggle position when sidebar collapsed */
+.sidebar-collapsed .sidebar-toggle {
+  right: -18px;
+}
+
+/* Main content container */
+.admin-main {
+  margin-top: 56px; /* below header */
+  margin-left: 250px; /* space for sidebar */
+  padding: 1rem 2rem;
+  transition: margin-left 0.3s ease;
+  min-height: calc(100vh - 56px);
+  background-color: #f8f9fa;
+}
+
+/* Main content margin when sidebar collapsed */
+.sidebar-collapsed .admin-main {
+  margin-left: 80px;
+}

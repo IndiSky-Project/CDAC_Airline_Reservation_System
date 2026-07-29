@@ -1,0 +1,55 @@
+.admin-sidebar {
+  width: 240px;
+  transition: width 0.3s ease;
+  height: 100vh;
+  overflow: visible;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  padding-top: 80px;
+}
+
+.admin-sidebar.collapsed {
+  width: 70px;
+}
+
+.admin-sidebar .nav-link {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.admin-sidebar .nav-link:hover {
+  background-color: #343a40;
+  color: #f8f9fa !important;
+}
+
+.admin-sidebar .active-link {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.admin-sidebar {
+  width: 240px;
+  transition: width 0.3s ease;
+  min-height: 100vh;
+}
+
+.admin-sidebar.collapsed {
+  width: 70px;
+}
+
+.admin-main {
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
+}
+
+.admin-main.collapsed {
+  margin-left: 70px;
+}
