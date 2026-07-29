@@ -17,6 +17,9 @@ import FlightStatus from '../src/Pages/FlightStatus';
 
 
 import UserDashBoard from './Pages/UserDashBoard';
+import AdminDashboard from './Pages/Admin/AdminDashboard';
+import ManageAirlines from './Pages/Admin/ManageAirlines';
+import ManageFlights from './Pages/Admin/ManageFlights';
 
 
 
@@ -83,7 +86,13 @@ function App() {
                         {/* Admin Routes */}
                         
 
+                         <Route path='/admin/dashboard' element={<ProtectedRoute requiredRole="ADMIN"><AdminDashboard /></ProtectedRoute>} />
                         
+
+                        
+                        <Route path='/admin/airlines' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirlines /></ProtectedRoute>} />
+
+                      <Route path='/admin/flights' element={<ProtectedRoute requiredRole="ADMIN"><ManageFlights /></ProtectedRoute>} />
 
 
                         {/* Protected User routes */}
