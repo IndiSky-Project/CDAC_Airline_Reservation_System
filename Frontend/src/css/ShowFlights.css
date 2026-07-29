@@ -12,6 +12,8 @@
   user-select: none;
 }
 
+/* CHANGES */
+
 .flight-card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 10px 25px rgba(33, 147, 176, 0.4);
