@@ -1,0 +1,165 @@
+/* Flight Cards */
+.flight-card {
+  background: linear-gradient(135deg, #d0ecff, #a0d8ff);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  box-shadow: 0 3px 7px rgba(33, 147, 176, 0.2);
+  color: #0d2f4a;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  user-select: none;
+}
+
+.flight-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(33, 147, 176, 0.4);
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  color: white;
+}
+
+.flight-card.selected {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  color: white;
+  box-shadow: 0 14px 30px rgba(33, 147, 176, 0.7);
+}
+
+.flight-airline {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.flight-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flight-time h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.flight-time h5 {
+  margin: 0;
+  font-weight: 400;
+  color: #09527a;
+}
+
+.flight-duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #004a77;
+}
+
+.flight-duration hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #004a77;
+  margin: 2px 0;
+}
+
+.flight-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: inherit;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Trip summary bar */
+.trip-summary span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Tabs */
+.tab, .tab-active {
+  padding: 10px 0;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: default;
+  user-select: none;
+}
+
+.tab {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #90caf9;
+}
+
+.tab-active {
+  background-color: #1976d2;
+  color: white;
+  border: 1px solid #1976d2;
+}
+
+/* Booking summary fixed bottom bar */
+.booking-summary-container {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 -5px 25px rgba(33, 147, 176, 0.15);
+}
+
+/* Booking total */
+.booking-total h3 {
+  margin: 0;
+  color: #1976d2;
+  font-weight: 800;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .flight-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .booking-summary-container .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .booking-flight-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .booking-flight-card {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .booking-total {
+    justify-content: center !important;
+  }
+}
+
+/* --- Layout fix for sidebar and navbar --- */
+
+:root {
+  --navbar-height: 58px; /* adjust to your navbar height */
+  --sidebar-width: 240px;
+}
+
+/* Wrapper to push content below navbar */
+.page-content-wrapper {
+  padding-top: var(--navbar-height);
+  transition: margin-left 0.3s ease;
+}
+
+/* Push content right when sidebar is open */
+body.sidebar-open .page-content-wrapper {
+  margin-left: var(--sidebar-width);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 56px;
+  }
+  
+  body.sidebar-open .page-content-wrapper {
+    margin-left: 0; /* usually sidebar overlays on mobile */
+  }
+}
