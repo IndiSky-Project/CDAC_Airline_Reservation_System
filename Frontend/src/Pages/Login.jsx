@@ -42,7 +42,7 @@ function Login() {
 //     toast.success("Welcome to IndiSky!");
 
 //     // Redirect according to role
-//     if (payload.role === "ADMIN") {
+//     if (payload.role === "ADMIN")   {
 //         navigate("/admin");
 //     } else {
 //         navigate("/");
@@ -51,10 +51,10 @@ function Login() {
 //                 // } else {
 //                 //     toast.error(result.error || 'Invalid credentials');
 //                 // }
-//             } catch (err) {
+//             } catch (err)  {
 //                 console.error(err);
 //                 toast.error('Something went wrong');
-//             }
+//             } 
 //         }
 //     };
 
