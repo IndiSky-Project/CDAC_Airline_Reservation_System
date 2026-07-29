@@ -230,7 +230,7 @@ function ShowFlights() {
         </div>
       </div>
 
-      {/* Booking Summary  Bar */}
+      {/* Booking  Summary  Bar */}
       {(info.trip === 'OneWay' && selectedOneway) ||
         (info.trip === 'RoundTrip' && selectedOneway && selectedRoundtrip) ? (
         <div className="fixed-bottom booking-summary-container p-3 bg-light shadow-lg" style={{position:'fixed', bottom:0,zIndex: 1050}} >
