@@ -138,7 +138,7 @@ function ShowFlights() {
       <div className="container my-3" style={{ paddingBottom: "120px" }}>
 
         
-        {/* Trip Summary */}
+        {/* Trip Summary    */}
 
         {info.from && info.to && info.passenger && info.Tclass && (
           <div className="trip-summary d-flex justify-content-around bg-info p-3 rounded text-white mb-4">
@@ -153,7 +153,7 @@ function ShowFlights() {
         )}
 
 
-        {/* Tabs */}
+        {/*   Tabs  */}
         <div className="row text-center mb-3 trip-tabs" role="tablist">
           <div
             role="tab"
