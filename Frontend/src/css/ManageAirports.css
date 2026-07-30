@@ -1,0 +1,74 @@
+/* Layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.admin-main {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 240px;
+  background-color: #ffffff;
+}
+
+.sidebar-collapsed .admin-main {
+  margin-left: 70px;
+}
+
+.main-content {
+  padding: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* Headings */
+h2 {
+  color: #343a40;
+  font-weight: 700;
+}
+
+/* Button */
+button.btn {
+  font-weight: 600;
+}
+
+/* Table Styling */
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table thead.table-dark th {
+  background-color: #343a40;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Table responsiveness */
+.table-responsive {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Modal Form Controls */
+.form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #512888;
+  box-shadow: 0 0 0 0.15rem rgba(81, 40, 136, 0.25);
+}
