@@ -31,7 +31,7 @@ export default function ManageUsers() {
     }
   };
 
-  // Filter users by fullName or email based on search input (case-insensitive)
+  // Filter user's by fullName or email based on search input (case-insensitive)
   const filteredUsers = users.filter(user =>
     user.fullName.toLowerCase().includes(searchText.toLowerCase()) ||
     user.email.toLowerCase().includes(searchText.toLowerCase())
@@ -61,7 +61,7 @@ export default function ManageUsers() {
             />
           </div>
 
-          {/* Users Table */}
+          
           <div className="table-responsive shadow-sm rounded">
             <table className="table table-hover align-middle">
               <thead className="table-dark">
