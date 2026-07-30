@@ -22,6 +22,8 @@ import AdminDashboard from './Pages/Admin/AdminDashboard';
 import ManageAirlines from './Pages/Admin/ManageAirlines';
 import ManageFlights from './Pages/Admin/ManageFlights';
 
+import ManageUsers from './Pages/Admin/ManageUsers';
+
 
 
 
@@ -92,6 +94,8 @@ function App() {
                       <Route path='/admin/airlines' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirlines /></ProtectedRoute>} />
 
                       <Route path='/admin/flights' element={<ProtectedRoute requiredRole="ADMIN"><ManageFlights /></ProtectedRoute>} />
+                      
+                      <Route path='/admin/users' element={<ProtectedRoute requiredRole="ADMIN"><ManageUsers /></ProtectedRoute>} />
 
 
                       {/* Protected User routes */}
