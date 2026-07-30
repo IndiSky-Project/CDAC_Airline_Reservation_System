@@ -4,7 +4,7 @@ import Sidebar from '../Component/Sidebar';
 import Footer from '../Component/Footer';
 import { useNavigate } from 'react-router-dom';
 import '../css/UserProfile.css';
-import { getUserDetails, updateUserDetails } from '../Service/user'; // your API helpers
+import { getUserDetails, updateUserDetails } from '../Service/user'; // your  API  helpers
 
 function parseJwt(token) {
   try {
@@ -148,11 +148,13 @@ function UserProfile() {
             </div>
           </div>
 
+
         </div>
       </div>
       <Footer />
     </div>
   );
 }
+
 
 export default UserProfile;
