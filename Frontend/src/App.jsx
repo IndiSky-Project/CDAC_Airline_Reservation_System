@@ -22,7 +22,7 @@ import AdminDashboard from './Pages/Admin/AdminDashboard';
 import ManageAirlines from './Pages/Admin/ManageAirlines';
 import ManageAirports from './Pages/Admin/ManageAirports';
 import ManageFlights from './Pages/Admin/ManageFlights';
-
+import ManageSeats from './Pages/Admin/ManageSeats';
 import ManageUsers from './Pages/Admin/ManageUsers';
 
 
@@ -97,6 +97,9 @@ function App() {
                       <Route path='/admin/airports' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirports /></ProtectedRoute>} />
 
                       <Route path='/admin/flights' element={<ProtectedRoute requiredRole="ADMIN"><ManageFlights /></ProtectedRoute>} />
+
+                      <Route path='/admin/seats' element={<ProtectedRoute requiredRole="ADMIN"><ManageSeats /></ProtectedRoute>} />
+
                       
                       <Route path='/admin/users' element={<ProtectedRoute requiredRole="ADMIN"><ManageUsers /></ProtectedRoute>} />
 
