@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState } from "react";
 import AdminSidebar from "../../Component/Admin/AdminSidebar";
+
 import AdminHeader from "../../Component/Admin/AdminHeader";
 import {
   getAllSeats,
