@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import Register from '../src/Pages/Register';
 import { Routes, Route } from 'react-router-dom';
+
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,15 +16,16 @@ import MyBookings from '../src/Pages/MyBookings';
 import UserProfile from '../src/Pages/UserProfile';
 import FlightStatus from '../src/Pages/FlightStatus';
 
-
-
 import UserDashBoard from './Pages/UserDashBoard';
 import AdminDashboard from './Pages/Admin/AdminDashboard';
 import ManageAirlines from './Pages/Admin/ManageAirlines';
+
 import ManageAirports from './Pages/Admin/ManageAirports';
 import ManageFlights from './Pages/Admin/ManageFlights';
 import ManageSeats from './Pages/Admin/ManageSeats';
+
 import ManageUsers from './Pages/Admin/ManageUsers';
+import FlightStatusManagement from './Pages/Admin/ManageFlightStatus';
 
 
 
@@ -102,6 +104,8 @@ function App() {
 
                       
                       <Route path='/admin/users' element={<ProtectedRoute requiredRole="ADMIN"><ManageUsers /></ProtectedRoute>} />
+
+                       <Route path='/admin/flight-status' element={<ProtectedRoute requiredRole="ADMIN"><FlightStatusManagement /></ProtectedRoute>} />
 
 
                       {/* Protected User routes */}
