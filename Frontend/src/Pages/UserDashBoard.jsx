@@ -12,7 +12,7 @@ function UserDashBoard() {
     { id: '#BKG1235', date: '2024-07-24', flight: 'Emirates', status: 'CANCELLED', price: 7000 },
   ];
 
-  // Helper to get badge color class based on status
+  //   Helper to get badge color class based on status
   const getStatusBadgeClass = (status) => {
     switch (status) {
       case 'CONFIRMED':

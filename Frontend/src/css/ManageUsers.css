@@ -1,0 +1,115 @@
+/* ManageUsers.css */
+
+/* Layout structure */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.admin-main {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 240px;
+  background-color: #ffffff;
+}
+
+.admin-layout.sidebar-collapsed .admin-main {
+  margin-left: 70px;
+}
+
+/* Page title */
+h2 {
+  color: #343a40;
+  font-weight: 700;
+}
+
+/* Table */
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table thead.table-dark th {
+  background-color: #343a40;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 6px 14px;
+  display: inline-block;
+}
+
+.bg-success {
+  background-color: #d4edda !important;
+  color: #155724 !important;
+}
+
+.bg-danger {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+}
+
+.bg-info {
+  background-color: #d1ecf1 !important;
+  color: #0c5460 !important;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 600;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+/* Table container */
+.table-responsive {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}

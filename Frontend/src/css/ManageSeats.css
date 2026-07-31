@@ -1,0 +1,45 @@
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.admin-main {
+  flex-grow: 1;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-collapsed .admin-main {
+  margin-left: 80px;
+}
+
+.admin-main h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #e9ecef;
+  font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-warning,
+.btn-danger {
+  font-size: 0.875rem;
+  padding: 4px 10px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+  font-weight: 500;
+}
