@@ -23,8 +23,6 @@ import ManageAirlines from './Pages/Admin/ManageAirlines';
 import ManageFlights from './Pages/Admin/ManageFlights';
 
 
-
-
 export const infoContext = createContext();
 export const flightDetailsContext = createContext();
 export const totalPriceContext = createContext();
@@ -118,6 +116,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
