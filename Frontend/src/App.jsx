@@ -30,6 +30,8 @@ import ManageFlights from './Pages/Admin/ManageFlights';
 import ManageSeats from './Pages/Admin/ManageSeats';
 
 import AdminViewBookings from './Pages/Admin/AdminViewBookings';
+import PassengersList from './Pages/Admin/PassengersList';
+
 import ManageUsers from './Pages/Admin/ManageUsers';
 import FlightStatusManagement from './Pages/Admin/ManageFlightStatus';
 
@@ -108,6 +110,9 @@ function App() {
                       <Route path='/admin/flight-status' element={<ProtectedRoute requiredRole="ADMIN"><FlightStatusManagement /></ProtectedRoute>} />
 
                       <Route path="/admin/view-bookings" element={<ProtectedRoute requiredRole="ADMIN"><AdminViewBookings /></ProtectedRoute>} />
+                      
+                      <Route path="/admin/passengers" element={<ProtectedRoute requiredRole="ADMIN"><PassengersList /></ProtectedRoute>} />
+
 
                       
                       {/* Protected User routes */}
