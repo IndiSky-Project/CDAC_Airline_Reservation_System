@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import Register from '../src/Pages/Register';
 import { Routes, Route } from 'react-router-dom';
+
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,7 +23,14 @@ import UserDashBoard from './Pages/UserDashBoard';
 
 import AdminDashboard from './Pages/Admin/AdminDashboard';
 import ManageAirlines from './Pages/Admin/ManageAirlines';
+
+import ManageAirports from './Pages/Admin/ManageAirports';
 import ManageFlights from './Pages/Admin/ManageFlights';
+import ManageSeats from './Pages/Admin/ManageSeats';
+
+import AdminViewBookings from './Pages/Admin/AdminViewBookings';
+import ManageUsers from './Pages/Admin/ManageUsers';
+import FlightStatusManagement from './Pages/Admin/ManageFlightStatus';
 
 
 export const infoContext = createContext();
@@ -91,8 +99,18 @@ function App() {
                         
                       <Route path='/admin/airlines' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirlines /></ProtectedRoute>} />
 
+                      <Route path='/admin/airports' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirports /></ProtectedRoute>} />
+
                       <Route path='/admin/flights' element={<ProtectedRoute requiredRole="ADMIN"><ManageFlights /></ProtectedRoute>} />
 
+                      <Route path='/admin/seats' element={<ProtectedRoute requiredRole="ADMIN"><ManageSeats /></ProtectedRoute>} />
+
+                      
+                      <Route path='/admin/users' element={<ProtectedRoute requiredRole="ADMIN"><ManageUsers /></ProtectedRoute>} />
+
+                      <Route path='/admin/flight-status' element={<ProtectedRoute requiredRole="ADMIN"><FlightStatusManagement /></ProtectedRoute>} />
+
+                      <Route path="/admin/view-bookings" element={<ProtectedRoute requiredRole="ADMIN"><AdminViewBookings /></ProtectedRoute>} />
 
                       {/* Protected User routes */}
                       <Route path="/flight-status" element={<ProtectedRoute requiredRole="USER"><FlightStatus /></ProtectedRoute>} />
