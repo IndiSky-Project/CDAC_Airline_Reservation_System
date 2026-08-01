@@ -1,0 +1,35 @@
+.title {
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.passenger-card {
+  border-radius: 12px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.passenger-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.passenger-card input,
+.passenger-card select {
+  border-radius: 6px;
+}
+
+.save-btn {
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #198754;
+  color: white;
+}
