@@ -134,7 +134,8 @@ function Search() {
         </div>
       </div>
 
-      {/* Passenger and Class Dropdown */}
+      {/* Passengers and Class Dropdown */}
+
       <div className="dropdown mt-4">
         <label className="form-label">Passengers</label>
         <button
