@@ -12,19 +12,15 @@ import ShowFlights from '../src/Pages/ShowFlights';
 
 import Contact from '../src/Pages/Contact';
 import TermsPrivacy from '../src/Pages/TermsPrivacy';
-
 import MyBookings from '../src/Pages/MyBookings';
 import UserProfile from '../src/Pages/UserProfile';
 import FlightStatus from '../src/Pages/FlightStatus';
-
-
 import FlightDetails from './Pages/FlightDetails';
 import UserDashBoard from './Pages/UserDashBoard';
 
 
 import AdminDashboard from './Pages/Admin/AdminDashboard';
 import ManageAirlines from './Pages/Admin/ManageAirlines';
-
 import ManageAirports from './Pages/Admin/ManageAirports';
 import ManageFlights from './Pages/Admin/ManageFlights';
 import ManageSeats from './Pages/Admin/ManageSeats';
@@ -32,6 +28,10 @@ import ManageSeats from './Pages/Admin/ManageSeats';
 import AdminViewBookings from './Pages/Admin/AdminViewBookings';
 import ManageUsers from './Pages/Admin/ManageUsers';
 import FlightStatusManagement from './Pages/Admin/ManageFlightStatus';
+
+
+import SeatSelection from "./Pages/SeatSelection";
+import ProtectedRoute from "./Component/ProtectedRoute";
 
 
 export const infoContext = createContext();
@@ -121,6 +121,8 @@ function App() {
                       <Route path='/dashboard' element={<ProtectedRoute requiredRole="USER"><UserDashBoard /></ProtectedRoute>} />
   
                       <Route path="/my-bookings" element={<ProtectedRoute requiredRole="USER"><MyBookings /></ProtectedRoute>} />
+                     
+                     <Route path="/seat-selection" element={<ProtectedRoute requiredRole="USER"><SeatSelection /></ProtectedRoute>}/>
 
                       <Route path="/profile" element={<ProtectedRoute requiredRole="USER"><UserProfile /></ProtectedRoute>} />
 
