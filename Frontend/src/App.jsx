@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Login from '../src/Pages/Login';
 import Home from '../src/Pages/Home';
+import Passengers from "./Pages/Passengers";
 import ShowFlights from '../src/Pages/ShowFlights';
 
 import Contact from '../src/Pages/Contact';
@@ -92,11 +93,8 @@ function App() {
 
                         {/* Admin Routes */}
                         
-
-                         <Route path='/admin/dashboard' element={<ProtectedRoute requiredRole="ADMIN"><AdminDashboard /></ProtectedRoute>} />
-                        
-
-                        
+                      <Route path='/admin/dashboard' element={<ProtectedRoute requiredRole="ADMIN"><AdminDashboard /></ProtectedRoute>} />
+ 
                       <Route path='/admin/airlines' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirlines /></ProtectedRoute>} />
 
                       <Route path='/admin/airports' element={<ProtectedRoute requiredRole="ADMIN"><ManageAirports /></ProtectedRoute>} />
@@ -104,7 +102,6 @@ function App() {
                       <Route path='/admin/flights' element={<ProtectedRoute requiredRole="ADMIN"><ManageFlights /></ProtectedRoute>} />
 
                       <Route path='/admin/seats' element={<ProtectedRoute requiredRole="ADMIN"><ManageSeats /></ProtectedRoute>} />
-
                       
                       <Route path='/admin/users' element={<ProtectedRoute requiredRole="ADMIN"><ManageUsers /></ProtectedRoute>} />
 
@@ -112,8 +109,12 @@ function App() {
 
                       <Route path="/admin/view-bookings" element={<ProtectedRoute requiredRole="ADMIN"><AdminViewBookings /></ProtectedRoute>} />
 
+                      
                       {/* Protected User routes */}
+
                       <Route path="/flight-status" element={<ProtectedRoute requiredRole="USER"><FlightStatus /></ProtectedRoute>} />
+
+                      <Route path="/pass" element={<ProtectedRoute requiredRole="USER"><Passengers /></ProtectedRoute>} />
 
                       <Route path='/show' element={<ProtectedRoute requiredRole="USER"><ShowFlights /></ProtectedRoute>} />
 
