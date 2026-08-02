@@ -1,0 +1,71 @@
+/* PaymentHistory.css */
+
+.payment-history-container {
+  background: linear-gradient(to right, #f0f8ff, #ffffff);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.payment-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+.payment-table thead th {
+  background-color: #e0eaff;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.payment-table tbody tr {
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.payment-table tbody tr:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+}
+
+.payment-table td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  border-radius: 5px;
+}
+
+/* Status Badges */
+.badge-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.status-success {
+  background-color: #d1f2e2;
+  color: #198754;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-failed {
+  background-color: #f8d7da;
+  color: #dc3545;
+}
+
+.status-refunded {
+  background-color: #dbe9ff;
+  color: #0d6efd;
+}

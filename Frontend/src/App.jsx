@@ -5,10 +5,14 @@ import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Register from "./Pages/Register";
 import Login from '../src/Pages/Login';
 import Home from '../src/Pages/Home';
 import Passengers from "./Pages/Passengers";
 import ShowFlights from '../src/Pages/ShowFlights';
+import ReviewPayment from "./Pages/ReviewPayment";
+import BookingConfirmation from "./Pages/BookingConfirmation";
+
 
 import Contact from '../src/Pages/Contact';
 import TermsPrivacy from '../src/Pages/TermsPrivacy';
@@ -32,7 +36,6 @@ import FlightStatusManagement from './Pages/Admin/ManageFlightStatus';
 
 import SeatSelection from "./Pages/SeatSelection";
 import ProtectedRoute from "./Component/ProtectedRoute";
-
 
 export const infoContext = createContext();
 export const flightDetailsContext = createContext();
@@ -121,8 +124,12 @@ function App() {
                       <Route path='/dashboard' element={<ProtectedRoute requiredRole="USER"><UserDashBoard /></ProtectedRoute>} />
   
                       <Route path="/my-bookings" element={<ProtectedRoute requiredRole="USER"><MyBookings /></ProtectedRoute>} />
+
+                      <Route path="/review-payment" element={<ProtectedRoute requiredRole="USER"><ReviewPayment /></ProtectedRoute>} />
+
+                      <Route path="/booking-confirmation" element={<ProtectedRoute requiredRole="USER"><BookingConfirmation /></ProtectedRoute>} />
                      
-                     <Route path="/seat-selection" element={<ProtectedRoute requiredRole="USER"><SeatSelection /></ProtectedRoute>}/>
+                      <Route path="/seat-selection" element={<ProtectedRoute requiredRole="USER"><SeatSelection /></ProtectedRoute>}/>
 
                       <Route path="/profile" element={<ProtectedRoute requiredRole="USER"><UserProfile /></ProtectedRoute>} />
 
