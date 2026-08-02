@@ -5,10 +5,13 @@ import Sidebar from '../Component/Sidebar';
 import '../css/FlightStatus.css';
 import { getFlightStatusByNumber } from '../Service/flightStatusLog';
 
+
+
 function FlightStatus() {
   const [query, setQuery] = useState('');
   const [result, setResult] = useState(null);
   const [error, setError] = useState('');
+
 
   const handleCheckStatus = async () => {
     setError('');
@@ -17,6 +20,7 @@ function FlightStatus() {
       alert('Please enter Flight Number');
       return;
     }
+
 
     try {
       const data = await getFlightStatusByNumber(query);
@@ -27,11 +31,17 @@ function FlightStatus() {
         updatedAt: data.updatedAt
       };
 
+
       setResult(flightData);
-    } catch (err) {
+    } 
+    
+    
+    catch (err) {
       console.error(err);
       setError('Flight not found or backend error occurred.');
     }
+
+    
   };
 
   const getStatusBadge = (status) => {

@@ -2,14 +2,20 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+
+
 function Home() {
   const navigate = useNavigate();
+
+
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     toast.success("Logged out successfully");
     navigate("/login");
   };
+
+
 
   return (
     <div className="container mt-5 text-center">
@@ -21,10 +27,12 @@ function Home() {
         Login Successful ✅
       </p>
 
+
       <button
         className="btn btn-danger mt-3"
         onClick={handleLogout}
       >
+        
         Logout
       </button>
     </div>
