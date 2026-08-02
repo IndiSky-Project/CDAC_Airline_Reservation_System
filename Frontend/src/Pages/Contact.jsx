@@ -3,6 +3,7 @@ import SlideBar from '../Component/SlideBar';
 import Sidebar from '../Component/Sidebar';
 import Footer from '../Component/Footer';
 
+
 function Contact() {
   const [form, setForm] = useState({
     name: '',
@@ -10,9 +11,11 @@ function Contact() {
     subject: '',
     message: '',
   });
+  
 
   const [submitted, setSubmitted] = useState(false);
 
+  
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
