@@ -15,7 +15,7 @@ export const cancelBooking = async (bookingId) => {
   return response.data;
 };
 
-
+// Creates new booking and returns the booking details for payment processing.
 export async function createBooking(bookingPayload) {
   try {
     const url = `${config.serverUrl}/api/bookings`;
@@ -24,7 +24,7 @@ export async function createBooking(bookingPayload) {
     return response.data;
   } catch (error) {
     toast.error("Booking registration failed!");
-    //console.error("Error during booking:", error);
+    //console.error("Error during booking:",  error);
     return null;
   }
 }
