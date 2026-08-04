@@ -1,0 +1,13 @@
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #512888 !important;
+  box-shadow: 0 0 8px #9e79c8;
+  outline: none;
+}
+
+
+@media (max-width: 576px) {
+  .contact-form {
+    padding: 1.5rem !important;
+  }
+}
