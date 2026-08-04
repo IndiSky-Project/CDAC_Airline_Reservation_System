@@ -30,15 +30,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         final String authHeader = request.getHeader("Authorization");
         String token = null;
         String username = null;
-//        System.out.println("Authorization Header: " + authHeader);
+//        System.out.println( "authorization Header:" + authHeader);
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
-            token = authHeader.substring(7); // Remove "Bearer " prefix
+            token = authHeader.substring(7); //  Remove "Bearer  " prefix
 
             try {
-                username = jwtService.extractUserName(token);
+                username =  jwtService.extractUserName(token);
             } catch (Exception e) {
-//                System.out.println("Invalid JWT Token: " + e.getMessage());
+//                System.out.println(" Invalid JWT Token:" + e.getMessage() );
             }
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
