@@ -22,7 +22,8 @@ import org.springframework.stereotype.Service;
 public class AuthService implements UserDetailsService {
     private UserRepository userRepository;
 
-//    private AuthenticationManager authenticationManager;
+//    private AuthenticationManager authenticationManager ;
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email);
@@ -33,6 +34,5 @@ public class AuthService implements UserDetailsService {
 
         return new CustomUserDetails(user);
     }
-
 
 }
