@@ -19,6 +19,7 @@ public class UserProfileController {
 
     private final UserProfileService service;
 
+
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserRequestDto user){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.register(user));
@@ -36,6 +37,7 @@ public class UserProfileController {
         }
 
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
+    
     }
 
     @PutMapping("/{id}")
