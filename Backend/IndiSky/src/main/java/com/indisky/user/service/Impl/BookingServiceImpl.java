@@ -152,7 +152,6 @@ public class BookingServiceImpl implements BookingService {
         }).toList();
     }
 
-
     @Override
     public BookingResponseDto getUserBookingById(Long userId, Long bookingId) {
         Booking booking = bookingRepository.findByIdAndUserId(bookingId, userId)
@@ -164,4 +163,5 @@ public class BookingServiceImpl implements BookingService {
         dto.setTicketIds(booking.getTickets().stream().map(Ticket::getId).toList());
         return dto;
     }
+
 }
