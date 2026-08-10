@@ -10,4 +10,5 @@ public interface BookingService {
     BookingConfirmationDto getBookingConfirmation(Long bookingId);
     List<UserBookingDto> getUserBookings(Long userId);
     BookingResponseDto getUserBookingById(Long userId, Long bookingId);
+
 }
