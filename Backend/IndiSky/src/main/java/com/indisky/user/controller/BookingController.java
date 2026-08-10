@@ -8,13 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
-
 @RestController
 @RequestMapping("/api/bookings")
 @RequiredArgsConstructor
 public class BookingController {
-
 
     private final BookingService bookingService;
 
@@ -45,4 +42,5 @@ public class BookingController {
             @PathVariable Long bookingId) {
         return ResponseEntity.ok(bookingService.getUserBookingById(userId, bookingId));
     }
+
 }
